@@ -10,6 +10,11 @@ App.prototype =
 		
 	},
 	
+	attack: function(code)
+	{
+		frm.contentWindow.eval(code);
+	},
+	
 	toString: function()
 	{
 		return '[App]';

@@ -9,6 +9,10 @@ body {
 	overflow: hidden;
 	color: #fff;
 	background-color: #000;
+	user-select: none;
+	-ms-user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
 }
 
 
@@ -18,56 +22,72 @@ body {
 	left: 0px;
 	right: 0px;
 	height: 100%;
-	background-color: rgba(0, 0, 0, .5);
+	background-color: #777;
 	z-index: 9;
 	transition: opacity ease .2s, top ease .2s;
 }
 #username-container.hidden {
-	top: 100%;
+	
 	opacity: 0;
 }
 #username {
-	position: fixed;
+	position: absolute;
 	top: calc(50% - 20px);
 	left: calc(50% - 200px);
 	width: 400px;
 	height: 40px;
 	font-size: 30px;
+	text-align: center;
+	outline: none;
+}
+#username:focus {
+	outline: none;
+}
+#first-question {
+	position: absolute;
+	top: calc(50% - 70px);
+	height: 68px;
+	width: 100%;
+	text-align: center;
+	font-size: 30px;
+	font-weight: bold;
+	color: #fff;
+	border-bottom: 8px solid #000;
 }
 
 
 #console-container {
+	z-index: 8;
 	position: fixed;
 	top: 0%;
 	left: 0px;
 	right: 0px;
-	height: 50%;
-	background-color: rgba(0, 0, 0, .5);
-	z-index: 8;
-	transition: opacity ease .2s, top ease .2s;
+	bottom: 50%;
+	padding: 10px;
+	background-color: #fff;
 }
 #console {
-	position: absolute;
-	top: 0px;
-	left: 0px;
-	right: 0px;
-	bottom: 0px;
+	width: 100%;
+	height: 100%;
+	border: none;
+	outline: none;
 	font-size: 20px;
+	resize: none;
 }
 
 
 #frame-container {
+	z-index: 7;
 	position: fixed;
-	top: 0%;
+	top: 50%;
 	left: 0px;
 	right: 0px;
 	height: 50%;
-	z-index: 7;
+	background-color: #000;
+	padding-top: 5px;
 }
 #frame {
-	position: absolute;
-	top: 0px;
-	left: 0px;
-	right: 0px;
-	bottom: 0px;
+	width: 100%;
+	height: 100%;
+	background-color: #fff;
 }
