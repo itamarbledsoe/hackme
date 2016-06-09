@@ -1,0 +1,73 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: courier new;
+	font-size: 20px;
+	overflow: hidden;
+	color: #fff;
+	background-color: #000;
+}
+
+
+#username-container {
+	position: fixed;
+	top: 0%;
+	left: 0px;
+	right: 0px;
+	height: 100%;
+	background-color: rgba(0, 0, 0, .5);
+	z-index: 9;
+	transition: opacity ease .2s, top ease .2s;
+}
+#username-container.hidden {
+	top: 100%;
+	opacity: 0;
+}
+#username {
+	position: fixed;
+	top: calc(50% - 20px);
+	left: calc(50% - 200px);
+	width: 400px;
+	height: 40px;
+	font-size: 30px;
+}
+
+
+#console-container {
+	position: fixed;
+	top: 0%;
+	left: 0px;
+	right: 0px;
+	height: 50%;
+	background-color: rgba(0, 0, 0, .5);
+	z-index: 8;
+	transition: opacity ease .2s, top ease .2s;
+}
+#console {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	font-size: 20px;
+}
+
+
+#frame-container {
+	position: fixed;
+	top: 0%;
+	left: 0px;
+	right: 0px;
+	height: 50%;
+	z-index: 7;
+}
+#frame {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+}

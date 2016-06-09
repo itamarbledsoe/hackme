@@ -1,0 +1,29 @@
+HACK ME
+
+Each user registers first.
+A list of registered users and their online status is displayed in the lobby.
+The list is ordered by rank, which is based on all-time score.
+A user can challenge another user.
+A user can choose to be automatically paired with another user.
+
+
+TURN BASED MODE
+
+Each user chooses how long they want both users to have for writing their code. The average between both users' choice is then chosen.
+Each user writes code which will be executed on the oponent's side when time is up.
+
+
+REAL TIME MODE
+
+Each user writes code and sends it to be executed on the oponent's side whenever the user wants.
+
+
+PROPOSED GOALS
+
+Cause a freeze without using cheaty methods (e.g. "while(true);").
+Find and call a particular win function named and/or hidden by the oponent.
+
+
+MECHANISM
+
+The game's arena can be inside an iframe, to enable complete isolation from the game's UI. Possibly "about:blank", with injections from top window.
