@@ -1,3 +1,10 @@
+<?php
+	$_GET['MAC'] = '1';
+	include("../../+php/ip-to-host.php");
+	$id = file_get_contents("../../+data/clients/$MAC");
+	print "const ID = '$id';";
+?>
+
 var app;
 
 function fin()

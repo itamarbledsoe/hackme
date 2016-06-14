@@ -1,18 +1,70 @@
+App.CLIENT_ID	= "clientId";
+App.USERNAME	= "username";
+
 function App()
 {
-	
+	this.evaluateAction();
 }
 
 App.prototype =
 {
-	start: function()
+	intro: null,
+	lobby: null,
+	game: null,
+	
+	request: function(path, handler)
+	{
+		var req = new XMLHttpRequest();
+		req.onreadystatechange = function(evt)
+		{
+			handler(evt);
+		};
+		req.open("POST", path);
+		req.send();
+	},
+	
+	evaluateAction: function()
+	{
+		if (this.isClientNew())
+		{
+			this.showIntro();
+		}
+		else if (this.isClientInGame())
+		{
+			this.showGame();
+		}
+		else
+		{
+			this.showLobby();
+		}
+	},
+	
+	isClientNew: function()
+	{
+		if (localStorage.getItem(App.USERNAME) || localStorage.getItem(App.CLIENT_ID))
+		{
+			return false;
+		}
+	},
+	
+	isClientInGame: function()
 	{
 		
 	},
 	
-	attack: function(code)
+	showIntro: function()
 	{
-		frm.contentWindow.eval(code);
+		
+	},
+	
+	showGame: function()
+	{
+		
+	},
+	
+	showLobby: function()
+	{
+		
 	},
 	
 	toString: function()
